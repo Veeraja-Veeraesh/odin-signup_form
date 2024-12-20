@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin - Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* input:invalid {
+            border: 1px solid red;
+        } */
+        input:valid {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="section left">
+        <div class="header">
+            <div class="header-content">
+                <div class="header-logo"><img src="./images/odin-lined.svg" alt="odin-logo"></div>
+                <div class="header-title">ODIN</div>
+            </div class="header-content">
+        </div>
+        <footer>
+            Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on 
+            <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash</a>
+        </footer>
+    </div>
+
+    <div class="section right">
+        <div class="text-info">
+            <p>
+                This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>Sign up <em>now</em> to get started.
+            </p>
+            <p>
+                You <em>know</em> you want to.
+            </p>
+        </div>
+        
+        <div class="form-container">
+            <p>Let's do this</p>
+            <form action="https://httpbin.org/post" method="post">
+                <div class="names-container">
+                    <p>
+                        <label for="user_first_name">FIRST NAME<span aria_label="required">*</span></label>
+                        <input type="text" name="user_first_name" id="user_first_name" minlength="2" placeholder="Min. 2 characters" required>
+                    </p>
+                    
+                    <p>
+                        <label for="user_last_name">LAST NAME<span aria_label="required">*</span></label>
+                        <input type="text" name="user_last_name" id="user_last_name" minlength="2"  placeholder="Min. 2 characters" required>
+                    </p>
+                </div>
+
+                <div class="contact-container">
+                    <p>
+                        <label for="user_email">EMAIL<span aria-label="required">*</span></label>
+                        <input type="email" name="user_email" id="user_email" placeholder="abc@xyz.com" required>
+                    </p>
+                    
+                    <p>
+                        <label for="user_phone">PHONE NUMBER<span aria-label="required">*</span></label>
+                        <input type="tel" name="user_phone" id="user_phone" maxlength="10" placeholder="9876543210" required>
+                    </p>
+                </div>
+
+                <div class="password-container">
+                    <p>
+                        <label for="user_password">PASSWORD<span aria-label="required">*</span></label>
+                        <input type="password" name="user_password" id="user_password" required>
+                    </p>
+
+                    <p>
+                        <label for="user_confirm_password">CONFIRM PASSWORD<span aria-label="required">*</span></label>
+                        <input type="password" name="user_confirm_password" id="user_confirm_password" required>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <div class="btn-text-container">
+            <div>
+                <button type="submit">Create Account</button>
+                <div class="login-text">Already have an account? <a href="#">Log in</a></div>
+            </div>
+        </div>
+    </div>
+    
+</main>
+</body>
+</html>
