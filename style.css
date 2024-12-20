@@ -173,15 +173,18 @@ input {
     background-color: rgb(251, 251, 251);
 }
 
-input:invalid {
+input:focus {
+    outline: none;
+    border: 1px solid lightskyblue;
+    box-shadow:rgba(0, 0, 0, 0.15) 0px 0px 5px 2px;
+}
+
+input:user-invalid {
     border: 1px solid red;
 }
 
-input:focus {
-    outline: none;
-}
-
-input:valid {
+input:focus:valid,
+input:user-valid {
     border: 1px solid green;
 }
 
@@ -189,7 +192,6 @@ input:valid {
     margin-top: 8px;
     padding: 16px 0px 16px 48px;
     flex-direction: column;
-    /* border: 2px solid red; */
     gap: 24px;
     display: flex;
 }
@@ -212,6 +214,11 @@ button {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     text-align: center;
     color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
 }
 
 .login-text > a {

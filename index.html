@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin - Signup Form</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* input:invalid {
-            border: 1px solid red;
-        } */
-        input:valid {
-            border: 1px solid green;
-        }
-    </style>
+    <script src="script.js" defer></script>
 </head>
 <body>
 <main>
@@ -41,7 +34,7 @@
         
         <div class="form-container">
             <p>Let's do this</p>
-            <form action="https://httpbin.org/post" method="post">
+            <form action="https://httpbin.org/post" method="post" id="odin-form">
                 <div class="names-container">
                     <p>
                         <label for="user_first_name">FIRST NAME<span aria_label="required">*</span></label>
@@ -62,19 +55,19 @@
                     
                     <p>
                         <label for="user_phone">PHONE NUMBER<span aria-label="required">*</span></label>
-                        <input type="tel" name="user_phone" id="user_phone" maxlength="10" placeholder="9876543210" required>
+                        <input type="tel" name="user_phone" id="user_phone" maxlength="10" pattern="\d{10}" placeholder="9876543210" required>
                     </p>
                 </div>
 
                 <div class="password-container">
                     <p>
                         <label for="user_password">PASSWORD<span aria-label="required">*</span></label>
-                        <input type="password" name="user_password" id="user_password" required>
+                        <input type="password" name="user_password" id="user_password" onChange="onChange()" required>
                     </p>
 
                     <p>
                         <label for="user_confirm_password">CONFIRM PASSWORD<span aria-label="required">*</span></label>
-                        <input type="password" name="user_confirm_password" id="user_confirm_password" required>
+                        <input type="password" name="user_confirm_password" id="user_confirm_password" onChange="onChange()" required>
                     </p>
                 </div>
             </form>
@@ -82,7 +75,7 @@
 
         <div class="btn-text-container">
             <div>
-                <button type="submit">Create Account</button>
+                <button type="submit" form="odin-form">Create Account</button>
                 <div class="login-text">Already have an account? <a href="#">Log in</a></div>
             </div>
         </div>
